@@ -1,0 +1,46 @@
+encounters:
+  Id:
+    normalized_colname: id
+    type: str
+  START:
+    normalized_colname: start_time
+    type: datetime64[ns]
+  STOP:
+    normalized_colname: stop_time
+    type: datetime64[ns]
+  PATIENT:
+    normalized_colname: patient_id
+    type: str
+  ORGANIZATION:
+    normalized_colname: organization_id
+    type: str
+  PROVIDER:
+    normalized_colname: provider_id
+    type: str
+  PAYER:
+    normalized_colname: payer_id
+    type: str
+  ENCOUNTERCLASS:
+    normalized_colname: encounter_class
+    type: str
+  CODE:
+    normalized_colname: code
+    type: str
+  DESCRIPTION:
+    normalized_colname: description
+    type: str
+  BASE_ENCOUNTER_COST:
+    normalized_colname: base_encounter_cost
+    type: float
+  TOTAL_CLAIM_COST:
+    normalized_colname: total_claim_cost
+    type: float
+  PAYER_COVERAGE:
+    normalized_colname: payer_coverage
+    type: float
+  REASONCODE:
+    normalized_colname: reason_code
+    type: str
+  REASONDESCRIPTION:
+    normalized_colname: reason_description
+    type: str
