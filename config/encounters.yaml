@@ -1,0 +1,46 @@
+encounters:
+  Id:
+    normalised_colname: encounter_id
+    type: str
+  START:
+    normalised_colname: start_time
+    type: datetimestamp
+  STOP:
+    normalised_colname: stop_time
+    type: datetimestamp
+  PATIENT:
+    normalised_colname: patient_id
+    type: str
+  ORGANIZATION:
+    normalised_colname: organization_id
+    type: str
+  PROVIDER:
+    normalised_colname: provider_id
+    type: str
+  PAYER:
+    normalised_colname: payer_id
+    type: str
+  ENCOUNTERCLASS:
+    normalised_colname: encounter_class
+    type: str
+  CODE:
+    normalised_colname: code
+    type: str
+  DESCRIPTION:
+    normalised_colname: description
+    type: str
+  BASE_ENCOUNTER_COST:
+    normalised_colname: base_encounter_cost
+    type: float
+  TOTAL_CLAIM_COST:
+    normalised_colname: total_claim_cost
+    type: float
+  PAYER_COVERAGE:
+    normalised_colname: payer_coverage
+    type: float
+  REASONCODE:
+    normalised_colname: reason_code
+    type: str
+  REASONDESCRIPTION:
+    normalised_colname: reason_description
+    type: str
