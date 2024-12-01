@@ -1,0 +1,113 @@
+columns:
+  Id:
+    description: A unique identifier for each patient in the dataset
+    normalised_colname: id
+    type: str
+  BIRTHDATE:
+    description: BIRTHDATE
+    normalised_colname: birthdate
+    type: datetimestamp
+  DEATHDATE:
+    description: DEATHDATE
+    normalised_colname: deathdate
+    type: datetimestamp
+  SSN:
+    description: SSN
+    normalised_colname: ssn
+    type: str
+  DRIVERS:
+    description: DRIVERS
+    normalised_colname: drivers
+    type: str
+  PASSPORT:
+    description: PASSPORT
+    normalised_colname: passport
+    type: str
+  PREFIX:
+    description: PREFIX
+    normalised_colname: prefix
+    type: str
+  FIRST:
+    description: FIRST
+    normalised_colname: firstname
+    type: str
+  MIDDLE:
+    description: MIDDLE
+    normalised_colname: middlename
+    type: str
+  LAST:
+    description: LAST
+    normalised_colname: lastname
+    type: str
+  SUFFIX:
+    description: SUFFIX
+    normalised_colname: suffix
+    type: str
+  MAIDEN:
+    description: MAIDEN
+    normalised_colname: maiden
+    type: str
+  MARITAL:
+    description: Marital status 
+    normalised_colname: marital
+    type: str
+  RACE:
+    description: RACE
+    normalised_colname: race
+    type: str
+  ETHNICITY:
+    description: ETHNICITY
+    normalised_colname: ethnicity
+    type: str
+  GENDER:
+    description: GENDER
+    normalised_colname: gender
+    type: string
+  BIRTHPLACE:
+    description: BIRTHPLACE
+    normalised_colname: birthplace
+    type: string
+  ADDRESS:
+    description: ADDRESS
+    normalised_colname: address
+    type: string
+  CITY:
+    description: CITY
+    normalised_colname: city
+    type: string
+  STATE:
+    description: STATE
+    normalised_colname: state
+    type: string
+  COUNTY:
+    description: COUNTY
+    normalised_colname: county
+    type: string
+  FIPS:
+    description: FIPS
+    normalised_colname: fips
+    type: string
+  ZIP:
+    description: ZIP
+    normalised_colname: zip
+    type: string
+  LAT:
+    description: LAT
+    normalised_colname: lat
+    type: float
+  LON:
+    description: LON
+    normalised_colname: lon
+    type: float
+  HEALTHCARE_EXPENSES:
+    description: Total healthcare expenses for the patient
+    normalised_colname: healthcare_expenses
+    type: float
+  HEALTHCARE_COVERAGE:
+    description: The total amount covered by insurance for the patient
+    normalised_colname: healthcare_coverage
+    type: float
+  INCOME:
+    description: Patient's annual income I assume
+    normalised_colname: income
+    type: float
