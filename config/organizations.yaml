@@ -1,0 +1,45 @@
+columns:
+  Id:
+    description: organization Id
+    normalised_colname: organization_id
+    type: str
+  NAME:
+    description: Possibly hospital name
+    normalised_colname: organization_name
+    type: str
+  ADDRESS:
+    description: self-explanatory
+    normalised_colname: address
+    type: str
+  CITY:
+    description: self-explanatory
+    normalised_colname: city
+    type: str
+  STATE:
+    description: self-explanatory
+    normalised_colname: state
+    type: str
+  ZIP:
+    description: self-explanatory
+    normalised_colname: zip
+    type: str
+  LAT:
+    description: self-explanatory
+    normalised_colname: lat
+    type: float
+  LON:
+    description: self-explanatory
+    normalised_colname: lon
+    type: float
+  PHONE:
+    description: self-explanatory
+    normalised_colname: phone
+    type: str
+  REVENUE:
+    description: self-explanatory
+    normalised_colname: revenue
+    type: float
+  UTILIZATION:
+    description: UTILIZATION, not sure
+    normalised_colname: utilization
+    type: str

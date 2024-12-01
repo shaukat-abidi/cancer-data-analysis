@@ -1,46 +1,61 @@
-encounters:
+columns:
   Id:
     normalised_colname: encounter_id
     type: str
+    description: Unique identifier for the encounter
   START:
     normalised_colname: start_time
     type: datetimestamp
+    description: The date and time when the encounter began.
   STOP:
     normalised_colname: stop_time
     type: datetimestamp
+    description: The date and time when the encounter ended.
   PATIENT:
     normalised_colname: patient_id
     type: str
+    description: Unique identifier for the specific patient and encounterid links to this patient_id
   ORGANIZATION:
     normalised_colname: organization_id
     type: str
+    description: A unique identifier for the hospital where the encounter occurred.
   PROVIDER:
     normalised_colname: provider_id
     type: str
+    description: Unique identifier for the healthcare provider I guess
   PAYER:
     normalised_colname: payer_id
     type: str
+    description: Unique identifier for the payer, might be insurance
   ENCOUNTERCLASS:
     normalised_colname: encounter_class
     type: str
+    description: Type of encounter - categorical variable that contains encounter types
   CODE:
     normalised_colname: code
     type: str
+    description: May be SNOMED code
   DESCRIPTION:
     normalised_colname: description
     type: str
+    description: A description of the encounter corresponding to the CODE
   BASE_ENCOUNTER_COST:
     normalised_colname: base_encounter_cost
     type: float
+    description: base cost
   TOTAL_CLAIM_COST:
     normalised_colname: total_claim_cost
     type: float
+    description: cost claimed for encounter
   PAYER_COVERAGE:
     normalised_colname: payer_coverage
     type: float
+    description: amount covered by payer
   REASONCODE:
     normalised_colname: reason_code
     type: str
+    description: May be diagnosis code I assume
   REASONDESCRIPTION:
     normalised_colname: reason_description
     type: str
+    description: Description of reason code
