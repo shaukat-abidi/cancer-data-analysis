@@ -1,0 +1,73 @@
+columns:
+  start_time:
+    type: datetimestamp
+    description: The date and time when the medication began.
+  stop_time:
+    type: datetimestamp
+    description: The date and time when the medication ended.
+  patient_id:
+    type: str
+    description: Unique identifier for the specific patient and encounterid links to this patient_id
+  payer_id:
+    type: str
+    description: Unique identifier for the payer, might be insurance
+  encounter_id:
+    type: str
+    description: Encounter id during which the medication was prescribed
+  code:
+    type: str
+    description: Probably the code representing the medication
+  medicine_description:
+    type: str
+    description: A description of the medication, including dosage and form
+  base_cost:
+    type: float
+    description: The base cost of a single unit or dose of the medication
+  payer_coverage:
+    type: float
+    description: amount covered by payer may be insurance
+  medicine_dispenses:
+    type: float
+    description: Probably, the number of times the medication was dispensed to the patient 
+  total_cost_of_medicine:
+    type: float
+    description: total cost of the medications
+  reason_code_for_medication:
+    type: str
+    description: May be diagnosis code due to which medication was presribed I assume
+  reason_description_for_medication:
+    type: str
+    description: Description of reason code
+  length_of_medication_in_days:
+    type: float
+    description: self explanatory
+  medicine_ended_or_recovered:
+    type: float
+    description: self explanatory
+  birthdate:
+    type: datetimestamp
+    description: DOB
+  marital:
+    type: str
+    description: marital status                             
+  race:
+    type: str
+    description: self explanatory
+  ethnicity:
+    type: str
+    description: self explanatory
+  gender:
+    type: str
+    description: self explanatory
+  income:
+    type: float
+    description: self explanatory                             
+  income_category:
+    type: str
+    description: self explanatory                         
+  age_of_patient:
+    type: float
+    description: self explanatory                             
+  age_category:
+    type: str
+    description: self explanatory

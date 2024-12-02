@@ -1,0 +1,76 @@
+columns:
+  encounter_id:
+    type: str
+    description: Unique identifier for the encounter
+  start_time:
+    type: datetimestamp
+    description: The date and time when the encounter began.
+  stop_time:
+    type: datetimestamp
+    description: The date and time when the encounter ended.
+  patient_id:
+    type: str
+    description: Unique identifier for the specific patient and encounterid links to this patient_id
+  organization_id:
+    type: str
+    description: A unique identifier for the hospital where the encounter occurred.
+  provider_id:
+    type: str
+    description: Unique identifier for the healthcare provider I guess
+  payer_id:
+    type: str
+    description: Unique identifier for the payer, might be insurance
+  encounter_class:
+    type: str
+    description: Type of encounter - categorical variable that contains encounter types
+  code:
+    type: str
+    description: May be SNOMED code
+  description:
+    type: str
+    description: A description of the encounter corresponding to the CODE
+  base_encounter_cost:
+    type: float
+    description: base cost
+  total_claim_cost:
+    type: float
+    description: cost claimed for encounter
+  payer_coverage:
+    type: float
+    description: amount covered by payer
+  reason_code:
+    type: str
+    description: May be diagnosis code I assume
+  reason_description:
+    type: str
+    description: Description of reason code
+  length_of_stay_hours:
+    type: float
+    description: length of stay in hours                            
+  birthdate:
+    type: datetimestamp
+    description: DOB
+  marital:
+    type: str
+    description: marital status                             
+  race:
+    type: str
+    description: self explanatory
+  ethnicity:
+    type: str
+    description: self explanatory
+  gender:
+    type: str
+    description: self explanatory
+  income:
+    type: float
+    description: self explanatory                             
+  income_category:
+    type: str
+    description: self explanatory                         
+  age_of_patient:
+    type: float
+    description: self explanatory                             
+  age_category:
+    type: str
+    description: self explanatory
