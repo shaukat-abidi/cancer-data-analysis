@@ -1,0 +1,41 @@
+columns:
+  START:
+    normalised_colname: start_time
+    type: datetimestamp
+    description: The date and time when the procedure began.
+  STOP:
+    normalised_colname: stop_time
+    type: datetimestamp
+    description: The date and time when the procedure ended.
+  PATIENT:
+    normalised_colname: patient_id
+    type: str
+    description: Unique identifier for the specific patient and encounterid links to this patient_id
+  ENCOUNTER:
+    normalised_colname: encounter_id
+    type: str
+    description: Encounter id during which the procedure was performed
+  SYSTEM:
+    normalised_colname: system
+    type: str
+    description: Probably the code representing the medication
+  CODE:
+    normalised_colname: snomed_code
+    type: str
+    description: Probably the code representing the procedure
+  DESCRIPTION:
+    normalised_colname: procedure_description
+    type: str
+    description: A description of the procedure
+  BASE_COST:
+    normalised_colname: base_cost
+    type: float
+    description: The base cost of the procedure
+  REASONCODE:
+    normalised_colname: reason_code_for_procedure
+    type: str
+    description: May be diagnosis code due to which procedure was presribed I assume
+  REASONDESCRIPTION:
+    normalised_colname: reason_description_for_procedure
+    type: str
+    description: Description of the reason of the procedure

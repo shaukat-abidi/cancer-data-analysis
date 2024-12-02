@@ -62,35 +62,35 @@ columns:
   GENDER:
     description: GENDER
     normalised_colname: gender
-    type: string
+    type: str
   BIRTHPLACE:
     description: BIRTHPLACE
     normalised_colname: birthplace
-    type: string
+    type: str
   ADDRESS:
     description: ADDRESS
     normalised_colname: address
-    type: string
+    type: str
   CITY:
     description: CITY
     normalised_colname: city
-    type: string
+    type: str
   STATE:
     description: STATE
     normalised_colname: state
-    type: string
+    type: str
   COUNTY:
     description: COUNTY
     normalised_colname: county
-    type: string
+    type: str
   FIPS:
     description: FIPS
     normalised_colname: fips
-    type: string
+    type: str
   ZIP:
     description: ZIP
     normalised_colname: zip
-    type: string
+    type: str
   LAT:
     description: LAT
     normalised_colname: lat

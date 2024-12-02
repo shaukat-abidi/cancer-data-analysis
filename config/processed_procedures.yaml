@@ -1,0 +1,61 @@
+columns:
+  start_time:
+    type: datetimestamp
+    description: The date and time when the procedure began.
+  stop_time:
+    type: datetimestamp
+    description: The date and time when the procedure ended.
+  patient_id:
+    type: str
+    description: Unique identifier for the specific patient and encounterid links to this patient_id
+  encounter_id:
+    type: str
+    description: Encounter id during which the procedure was performed
+  system:
+    type: str
+    description: Probably the code representing the medication
+  snomed_code:
+    type: str
+    description: Probably the code representing the procedure
+  procedure_description:
+    type: str
+    description: A description of the procedure
+  base_cost:
+    type: float
+    description: The base cost of the procedure
+  reason_code_for_procedure:
+    type: str
+    description: May be diagnosis code due to which procedure was presribed I assume
+  reason_description_for_procedure:
+    type: str
+    description: Description of the reason of the procedure
+  length_of_procedure_in_hours: 
+    type: float
+    description: Self explanatory
+  birthdate:
+    type: datetimestamp
+    description: DOB
+  marital:
+    type: str
+    description: marital status                             
+  race:
+    type: str
+    description: self explanatory
+  ethnicity:
+    type: str
+    description: self explanatory
+  gender:
+    type: str
+    description: self explanatory
+  income:
+    type: float
+    description: self explanatory                             
+  income_category:
+    type: str
+    description: self explanatory                         
+  age_of_patient:
+    type: float
+    description: self explanatory                             
+  age_category:
+    type: str
+    description: self explanatory
