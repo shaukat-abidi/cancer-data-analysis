@@ -1,0 +1,55 @@
+columns:
+  start_time:
+    type: datetimestamp
+    description: The date when the condition was recorded or began.
+  stop_time:
+    type: datetimestamp
+    description: The date when the condition resolved or was no longer active (Empty fields may indicate ongoing conditions)
+  patient_id:
+    type: str
+    description: A unique identifier for the patient experiencing the condition
+  encounter_id:
+    type: str
+    description: A unique identifier linking the condition to the specific medical encounter during which it was recorded
+  system:
+    type: str
+    description: The coding system used to classify the condition (SNOMED as given in file)
+  snomed_code:
+    type: str
+    description: A standardised code representing the condition.
+  condition_description:
+    type: str
+    description: A textual description of the condition or finding corresponding to the code
+  length_of_condition_in_days:
+    type: float
+    description: self explanatory
+  condition_persistent_or_ended:
+    type: float
+    description: if condition is persistent then 1 else 0 
+  birthdate:
+    type: datetimestamp
+    description: DOB
+  marital:
+    type: str
+    description: marital status                             
+  race:
+    type: str
+    description: self explanatory
+  ethnicity:
+    type: str
+    description: self explanatory
+  gender:
+    type: str
+    description: self explanatory
+  income:
+    type: float
+    description: self explanatory                             
+  income_category:
+    type: str
+    description: self explanatory                         
+  age_of_patient:
+    type: float
+    description: self explanatory                             
+  age_category:
+    type: str
+    description: self explanatory

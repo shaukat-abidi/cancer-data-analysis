@@ -1,0 +1,88 @@
+columns:
+  id:
+    type: str
+    description: A unique identifier for each patient in the dataset
+  birthdate:
+    description: BIRTHDATE
+    type: datetimestamp
+  deathdate:
+    description: DEATHDATE
+    type: datetimestamp
+  ssn:
+    description: SSN
+    type: str
+  drivers:
+    description: DRIVERS
+    type: str
+  passport:
+    description: PASSPORT
+    type: str
+  prefix:
+    description: PREFIX
+    type: str
+  firstname:
+    description: FIRST
+    type: str
+  middlename:
+    description: MIDDLE
+    type: str
+  lastname:
+    description: LAST
+    type: str
+  suffix:
+    description: SUFFIX
+    type: str
+  maiden:
+    description: MAIDEN
+    type: str
+  marital:
+    description: Marital status 
+    type: str
+  race:
+    description: RACE
+    type: str
+  ethnicity:
+    description: ETHNICITY
+    type: str
+  gender:
+    description: GENDER
+    type: str
+  birthplace:
+    description: BIRTHPLACE
+    type: str
+  address:
+    description: ADDRESS
+    type: str
+  city:
+    description: CITY
+    type: str
+  state:
+    description: STATE
+    type: str
+  county:
+    description: COUNTY
+    type: str
+  fips:
+    description: FIPS
+    type: str
+  zip:
+    description: ZIP
+    type: str
+  lat:
+    description: LAT
+    type: float
+  lon:
+    description: LON
+    type: float
+  healthcare_expenses:
+    description: Total healthcare expenses for the patient
+    type: float
+  healthcare_coverage:
+    description: The total amount covered by insurance for the patient
+    type: float
+  income:
+    description: Patient's annual income I assume
+    type: float
+  income_category:
+    description: Patient's annual income category derived from income
+    type: str
