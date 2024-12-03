@@ -1,0 +1,58 @@
+../../data/processed_data/processed_patients.csv exists. Proceed with the processing.
+Loading YAML file: ../../config/encounters.yaml
+Renamed column: 'Id' to 'encounter_id'.
+Column 'encounter_id' cast to type 'str'.
+--------------------
+Renamed column: 'START' to 'start_time'.
+Column 'start_time' cast to type 'datetimestamp'.
+--------------------
+Renamed column: 'STOP' to 'stop_time'.
+Column 'stop_time' cast to type 'datetimestamp'.
+--------------------
+Renamed column: 'PATIENT' to 'patient_id'.
+Column 'patient_id' cast to type 'str'.
+--------------------
+Renamed column: 'ORGANIZATION' to 'organization_id'.
+Column 'organization_id' cast to type 'str'.
+--------------------
+Renamed column: 'PROVIDER' to 'provider_id'.
+Column 'provider_id' cast to type 'str'.
+--------------------
+Renamed column: 'PAYER' to 'payer_id'.
+Column 'payer_id' cast to type 'str'.
+--------------------
+Renamed column: 'ENCOUNTERCLASS' to 'encounter_class'.
+Column 'encounter_class' cast to type 'str'.
+--------------------
+Renamed column: 'CODE' to 'code'.
+Column 'code' cast to type 'str'.
+--------------------
+Renamed column: 'DESCRIPTION' to 'description'.
+Column 'description' cast to type 'str'.
+--------------------
+Renamed column: 'BASE_ENCOUNTER_COST' to 'base_encounter_cost'.
+Column 'base_encounter_cost' cast to type 'numeric'.
+--------------------
+Renamed column: 'TOTAL_CLAIM_COST' to 'total_claim_cost'.
+Column 'total_claim_cost' cast to type 'numeric'.
+--------------------
+Renamed column: 'PAYER_COVERAGE' to 'payer_coverage'.
+Column 'payer_coverage' cast to type 'numeric'.
+--------------------
+Renamed column: 'REASONCODE' to 'reason_code'.
+Column 'reason_code' cast to type 'str'.
+--------------------
+Renamed column: 'REASONDESCRIPTION' to 'reason_description'.
+Column 'reason_description' cast to type 'str'.
+--------------------
+Total length of DataFrame BEFORE removing duplicates: 7049
+Total length of DataFrame AFTER removing duplicates: 7049
+Unique values in encounter_class: ['wellness' 'emergency' 'ambulatory' 'outpatient' 'inpatient' 'urgentcare'
+ 'hospice' 'snf' 'virtual' 'home']
+Unique values too large to print: total 45 unique values found.
+Unique values too large to print: total 106 unique values found.
+Total entries: 7049, Valid dates: 7049, Invalid dates: 0
+Length of DataFrame BEFORE left join: 7049
+Length of DataFrame AFTER left join: 7049
+categorising age_of_patient...
+Processed data saved to ../../data/processed_data/processed_encounters.csv

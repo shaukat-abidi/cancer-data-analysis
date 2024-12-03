@@ -7,10 +7,152 @@ tasks such as renaming and casting columns in a pandas DataFrame.
 """
 
 import os
+import sys
 import pandas as pd
 from ydata_profiling import ProfileReport
+import yaml
 
-import yaml 
+
+def save_dataframe(df, output_path):
+    """
+    Save the DataFrame to a CSV file.
+
+    Args:
+        df (pd.DataFrame): The DataFrame to save.
+        output_path (str): The path to save the CSV file.
+    """
+    try:
+        df.to_csv(output_path, index=False)
+        print(f"Processed data saved to '{output_path}'.")
+    except Exception as e:
+        print(f"Error saving CSV file '{output_path}': {e}")
+        sys.exit(1)
+
+
+def remove_duplicates(df):
+    """
+    Remove duplicate rows from the DataFrame.
+
+    Args:
+        df (pd.DataFrame): The DataFrame to remove duplicates from.
+
+    Returns:
+        pd.DataFrame: The DataFrame without duplicates.
+    """
+    initial_length = len(df)
+    print(f"Total length of DataFrame BEFORE removing duplicates: {initial_length}")
+    df = df.drop_duplicates()
+    final_length = len(df)
+    print(f"Total length of DataFrame AFTER removing duplicates: {final_length}")
+    return df
+
+
+def load_dataframe(filepath):
+    """
+    Load a CSV file into a pandas DataFrame.
+
+    Args:
+        filepath (str): The path to the CSV file.
+
+    Returns:
+        pd.DataFrame: The loaded DataFrame.
+    """
+    try:
+        return pd.read_csv(filepath)
+    except FileNotFoundError:
+        print(f"Error: File not found at '{filepath}'.")
+        sys.exit(1)
+    except Exception as e:
+        print(f"Error loading CSV file '{filepath}': {e}")
+        sys.exit(1)
+
+
+def check_file_exists(filepath, error_message):
+    """
+    Check if a file exists. Exit the script with a message if the file is missing.
+    
+    Args:
+        filepath (str): Path to the file to check.
+        error_message (str): Message to display if the file is missing.
+    """
+    if not os.path.exists(filepath):
+        print(error_message)
+        sys.exit(1)
+    print(f"{filepath} exists. Proceed with the processing.")
+
+
+def categorize_column(df, column_name, categorised_column_name, bins, labels):
+    """
+    Categorize column into specified bins and labels.
+    
+    Args:
+        df (pd.DataFrame): DataFrame containing the column_name.
+        column_name (str): Column name to categorise.
+        categorised_column_name (str): categorised column name
+        bins (list): Bin edges for categorisation.
+        labels (list): Labels for the categories.
+    
+    Returns:
+        pd.DataFrame: DataFrame with the added category column.
+    """
+    if column_name in df.columns:
+        print(f"categorising {column_name}...")
+        df[categorised_column_name] = pd.cut(df[column_name], bins=bins, labels=labels, right=False)
+    else:
+        print(f"Warning: Column '{column_name}' not found in the DataFrame.")
+    return df
+
+
+def load_yaml(filepath):
+    """
+    Load YAML file and return the content as a dictionary.
+    
+    Args:
+        filepath (str): Path to the YAML file.
+    
+    Returns:
+        dict: Parsed YAML content.
+    """
+    try:
+        with open(filepath, "r") as file:
+            print(f"Loading YAML file: {filepath}")
+            return yaml.safe_load(file)
+    except Exception as e:
+        print(f"Error loading YAML file: {e}")
+        sys.exit(1)
+
+
+def display_dataset_info(df, message):
+    """
+    Display information about the dataset.
+    
+    Args:
+        df (pd.DataFrame): DataFrame to display info for.
+        message (str): Custom message to display with the info.
+    """
+    print(f"{message}")
+    print(df.info())
+    print(df.head(5))
+
+
+def validate_categorical_columns(df, columns):
+    """
+    Print unique values for specified categorical columns.
+    
+    Args:
+        df (pd.DataFrame): DataFrame to validate.
+        columns (list): List of categorical columns to check.
+    """
+    for col in columns:
+        if col in df.columns:
+            unique_vals = df[col].unique()
+            len_unique_values = len(unique_vals)
+            if len_unique_values < 12:
+                print(f"Unique values in {col}: {unique_vals}")
+            else:
+                print(f"Unique values too large to print: total {len_unique_values} unique values found.")
+        else:
+            print(f"Warning: Column '{col}' not found in the DataFrame.")
 
 def func_generate_report(df, filename_of_report):
     # Calculate the size of the DataFrame in gigabytes
