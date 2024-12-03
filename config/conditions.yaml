@@ -1,0 +1,29 @@
+columns:
+  START:
+    normalised_colname: start_time
+    type: datetimestamp
+    description: The date when the condition was recorded or began.
+  STOP:
+    normalised_colname: stop_time
+    type: datetimestamp
+    description: The date when the condition resolved or was no longer active (Empty fields may indicate ongoing conditions)
+  PATIENT:
+    normalised_colname: patient_id
+    type: str
+    description: A unique identifier for the patient experiencing the condition
+  ENCOUNTER:
+    normalised_colname: encounter_id
+    type: str
+    description: A unique identifier linking the condition to the specific medical encounter during which it was recorded
+  SYSTEM:
+    normalised_colname: system
+    type: str
+    description: The coding system used to classify the condition (SNOMED as given in file)
+  CODE:
+    normalised_colname: snomed_code
+    type: str
+    description: A standardised code representing the condition.
+  DESCRIPTION:
+    normalised_colname: condition_description
+    type: str
+    description: A textual description of the condition or finding corresponding to the code

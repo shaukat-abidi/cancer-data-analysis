@@ -6,6 +6,7 @@ tasks such as renaming and casting columns in a pandas DataFrame.
 
 """
 
+import os
 import pandas as pd
 from ydata_profiling import ProfileReport
 
