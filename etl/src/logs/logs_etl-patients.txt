@@ -1,0 +1,198 @@
+CSV loaded into dataframe from:                                        Id  ...  INCOME
+0    30a6452c-4297-a1ac-977a-6a23237c7b46  ...  100511
+1    34a4dcc4-35fb-6ad5-ab98-be285c586a4f  ...   49737
+2    7179458e-d6e3-c723-2530-d4acfe1c2668  ...  133816
+3    37c177ea-4398-fb7a-29fa-70eb3d673876  ...   17382
+4    0fef2411-21f0-a269-82fb-c42b55471405  ...   52159
+..                                    ...  ...     ...
+101  37713015-cfb5-bf1a-70eb-970101f32341  ...   35486
+102  d426334c-a982-3a31-7e0f-ca3c7fe01310  ...   61016
+103  cb1b46a1-9cb5-1187-ccc5-9fb7b98aa957  ...   63727
+104  d1622e8b-d26b-ec81-ffcb-ec4bf2af385b  ...   92537
+105  f339a5f7-0b09-3072-2b01-7c8e8ca2c1fc  ...   92537
+
+[106 rows x 28 columns]
+Loading YAML file: ../../config/patients.yaml
+Initial Dataset Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 106 entries, 0 to 105
+Data columns (total 28 columns):
+ #   Column               Non-Null Count  Dtype  
+---  ------               --------------  -----  
+ 0   Id                   106 non-null    object 
+ 1   BIRTHDATE            106 non-null    object 
+ 2   DEATHDATE            6 non-null      object 
+ 3   SSN                  106 non-null    object 
+ 4   DRIVERS              84 non-null     object 
+ 5   PASSPORT             75 non-null     object 
+ 6   PREFIX               79 non-null     object 
+ 7   FIRST                106 non-null    object 
+ 8   MIDDLE               89 non-null     object 
+ 9   LAST                 106 non-null    object 
+ 10  SUFFIX               0 non-null      float64
+ 11  MAIDEN               28 non-null     object 
+ 12  MARITAL              64 non-null     object 
+ 13  RACE                 106 non-null    object 
+ 14  ETHNICITY            106 non-null    object 
+ 15  GENDER               106 non-null    object 
+ 16  BIRTHPLACE           106 non-null    object 
+ 17  ADDRESS              106 non-null    object 
+ 18  CITY                 106 non-null    object 
+ 19  STATE                106 non-null    object 
+ 20  COUNTY               106 non-null    object 
+ 21  FIPS                 71 non-null     float64
+ 22  ZIP                  106 non-null    int64  
+ 23  LAT                  106 non-null    float64
+ 24  LON                  106 non-null    float64
+ 25  HEALTHCARE_EXPENSES  106 non-null    float64
+ 26  HEALTHCARE_COVERAGE  106 non-null    float64
+ 27  INCOME               106 non-null    int64  
+dtypes: float64(6), int64(2), object(20)
+memory usage: 23.3+ KB
+None
+                                     Id  ...  INCOME
+0  30a6452c-4297-a1ac-977a-6a23237c7b46  ...  100511
+1  34a4dcc4-35fb-6ad5-ab98-be285c586a4f  ...   49737
+2  7179458e-d6e3-c723-2530-d4acfe1c2668  ...  133816
+3  37c177ea-4398-fb7a-29fa-70eb3d673876  ...   17382
+4  0fef2411-21f0-a269-82fb-c42b55471405  ...   52159
+
+[5 rows x 28 columns]
+Renamed column: 'Id' to 'id'.
+Column 'id' cast to type 'str'.
+--------------------
+Renamed column: 'BIRTHDATE' to 'birthdate'.
+Column 'birthdate' cast to type 'datetimestamp'.
+--------------------
+Renamed column: 'DEATHDATE' to 'deathdate'.
+Column 'deathdate' cast to type 'datetimestamp'.
+--------------------
+Renamed column: 'SSN' to 'ssn'.
+Column 'ssn' cast to type 'str'.
+--------------------
+Renamed column: 'DRIVERS' to 'drivers'.
+Column 'drivers' cast to type 'str'.
+--------------------
+Renamed column: 'PASSPORT' to 'passport'.
+Column 'passport' cast to type 'str'.
+--------------------
+Renamed column: 'PREFIX' to 'prefix'.
+Column 'prefix' cast to type 'str'.
+--------------------
+Renamed column: 'FIRST' to 'firstname'.
+Column 'firstname' cast to type 'str'.
+--------------------
+Renamed column: 'MIDDLE' to 'middlename'.
+Column 'middlename' cast to type 'str'.
+--------------------
+Renamed column: 'LAST' to 'lastname'.
+Column 'lastname' cast to type 'str'.
+--------------------
+Renamed column: 'SUFFIX' to 'suffix'.
+Column 'suffix' cast to type 'str'.
+--------------------
+Renamed column: 'MAIDEN' to 'maiden'.
+Column 'maiden' cast to type 'str'.
+--------------------
+Renamed column: 'MARITAL' to 'marital'.
+Column 'marital' cast to type 'str'.
+--------------------
+Renamed column: 'RACE' to 'race'.
+Column 'race' cast to type 'str'.
+--------------------
+Renamed column: 'ETHNICITY' to 'ethnicity'.
+Column 'ethnicity' cast to type 'str'.
+--------------------
+Renamed column: 'GENDER' to 'gender'.
+Column 'gender' cast to type 'str'.
+--------------------
+Renamed column: 'BIRTHPLACE' to 'birthplace'.
+Column 'birthplace' cast to type 'str'.
+--------------------
+Renamed column: 'ADDRESS' to 'address'.
+Column 'address' cast to type 'str'.
+--------------------
+Renamed column: 'CITY' to 'city'.
+Column 'city' cast to type 'str'.
+--------------------
+Renamed column: 'STATE' to 'state'.
+Column 'state' cast to type 'str'.
+--------------------
+Renamed column: 'COUNTY' to 'county'.
+Column 'county' cast to type 'str'.
+--------------------
+Renamed column: 'FIPS' to 'fips'.
+Column 'fips' cast to type 'str'.
+--------------------
+Renamed column: 'ZIP' to 'zip'.
+Column 'zip' cast to type 'str'.
+--------------------
+Renamed column: 'LAT' to 'lat'.
+Column 'lat' cast to type 'numeric'.
+--------------------
+Renamed column: 'LON' to 'lon'.
+Column 'lon' cast to type 'numeric'.
+--------------------
+Renamed column: 'HEALTHCARE_EXPENSES' to 'healthcare_expenses'.
+Column 'healthcare_expenses' cast to type 'numeric'.
+--------------------
+Renamed column: 'HEALTHCARE_COVERAGE' to 'healthcare_coverage'.
+Column 'healthcare_coverage' cast to type 'numeric'.
+--------------------
+Renamed column: 'INCOME' to 'income'.
+Column 'income' cast to type 'numeric'.
+--------------------
+Total length of DataFrame BEFORE removing duplicates: 106
+Total length of DataFrame AFTER removing duplicates: 106
+Unique values in marital: ['M' 'D' 'Unknown' 'W' 'S']
+Unique values in race: ['white' 'asian' 'other' 'black' 'native']
+Unique values in ethnicity: ['nonhispanic' 'hispanic']
+Unique values in gender: ['M' 'F']
+categorising income...
+processed Dataset Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 106 entries, 0 to 105
+Data columns (total 29 columns):
+ #   Column               Non-Null Count  Dtype         
+---  ------               --------------  -----         
+ 0   id                   106 non-null    object        
+ 1   birthdate            106 non-null    datetime64[ns]
+ 2   deathdate            6 non-null      datetime64[ns]
+ 3   ssn                  106 non-null    object        
+ 4   drivers              106 non-null    object        
+ 5   passport             106 non-null    object        
+ 6   prefix               106 non-null    object        
+ 7   firstname            106 non-null    object        
+ 8   middlename           106 non-null    object        
+ 9   lastname             106 non-null    object        
+ 10  suffix               106 non-null    object        
+ 11  maiden               106 non-null    object        
+ 12  marital              106 non-null    object        
+ 13  race                 106 non-null    object        
+ 14  ethnicity            106 non-null    object        
+ 15  gender               106 non-null    object        
+ 16  birthplace           106 non-null    object        
+ 17  address              106 non-null    object        
+ 18  city                 106 non-null    object        
+ 19  state                106 non-null    object        
+ 20  county               106 non-null    object        
+ 21  fips                 106 non-null    object        
+ 22  zip                  106 non-null    object        
+ 23  lat                  106 non-null    float64       
+ 24  lon                  106 non-null    float64       
+ 25  healthcare_expenses  106 non-null    float64       
+ 26  healthcare_coverage  106 non-null    float64       
+ 27  income               106 non-null    int64         
+ 28  income_category      106 non-null    category      
+dtypes: category(1), datetime64[ns](2), float64(4), int64(1), object(21)
+memory usage: 23.5+ KB
+None
+                                     id  birthdate  ...  income income_category
+0  30a6452c-4297-a1ac-977a-6a23237c7b46 1994-02-06  ...  100511     high-income
+1  34a4dcc4-35fb-6ad5-ab98-be285c586a4f 1968-08-06  ...   49737   medium-income
+2  7179458e-d6e3-c723-2530-d4acfe1c2668 2008-12-21  ...  133816     high-income
+3  37c177ea-4398-fb7a-29fa-70eb3d673876 1994-01-27  ...   17382      low-income
+4  0fef2411-21f0-a269-82fb-c42b55471405 2019-07-27  ...   52159   medium-income
+
+[5 rows x 29 columns]
+Processed data saved to ../../data/processed_data/processed_patients.csv
